@@ -1,35 +1,24 @@
-import { Card } from "../components/Card"
-import { Inputs } from "../components/Inputs"
 import { homeStyles as hstyle } from "../utilities/styles"
-import gemini from "../assets/gemini.png"
-import fb from "../assets/fb.png"
-import chess from "../assets/chess.png"
-import gpt from "../assets/gpt.png"
-import claude from "../assets/claude.png"
-import { Navbar } from "../components/Navbar"
+
+import { Flow } from "../components/Flow"
+
 
 export const HomePage = () => {
     return(
-        <>
-        <div className="">
-            <Navbar />
-        </div>
-        <div className={hstyle.Container}>
-            
-            <h1 className={hstyle.title}>Google</h1>
-            {/* Barre de recherche */}
-            <Inputs />
+        <div className="bg-linear-to-r from-violet-500 to-fuchsia-500 h-screen flex items-center">
+            {/* LEFT TAB */}
+            <div className="">
+                <div className="  rounded-2xl ml-5 bg-linear-to-l from-violet-600 to-fuchsia-600  shadow-lg">
+                    <div className="w-60 h-120 ">
 
-            {/* Liste des racourcies */}
-            <div className="flex flex-wrap  justify-center items-center">
-                <Card image={gemini} titre={"Google Gemini "}/>
-                <Card image={fb} titre={"Facebook "}/>
-                <Card image={chess} titre={"Lichess "}/>
-                <Card image={gpt} titre={"Chat-GPT "}/>
-                <Card image={claude} titre={"Claude.ai"}/>
-                
+                    </div>
+                </div>
+            </div>
+
+            {/* WORK SPACE */}
+            <div className="">
+                <Flow />
             </div>
         </div>
-        </>
     )
 }

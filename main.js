@@ -12,8 +12,10 @@ const __dirname = path.dirname(__filename);
 
 function createWindow() {
   const win = new BrowserWindow({
-    width: 800,
+    width: 1000,
     height: 600,
+    minwidth: 800,
+    minheight: 500,
     webPreferences: {
       nodeIntegration: true,
       contextIsolation: false,
